@@ -16,4 +16,10 @@ class Routes extends Controller
    {
        return view('test');
    }
+   
+   
+   public function hum()
+   {
+       return view('hum');
+   }
 }

@@ -6,3 +6,31 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+body{
+    background-color: #fff;
+    // font-family: Century Gothic;
+    font-family:"Open sans", Helvetica, Arial;
+}
+#sec_1{
+    background-color: rgba(255, 166, 0, 0.904);
+}
+.bg_2{
+    background-color: rgba(0, 128, 0, 0.267);
+}
+
+/*******************************/
+/*           Jumbotron         */
+/*******************************/
+.jumbotron { color: inherit; background-color: #F7F5F4; padding-top:30px; padding-bottom:30px; margin-bottom:0; }
+.container .jumbotron { -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; padding-left:40px; padding-right:40px; }
+.jumbotron p { font-size:inherit; }
+.jumbotron h2, .jumbotron h3, .jumbotron h4, 
+.jumbotron h5, .jumbotron h6 { line-height: 1.3em; }
+
+.thin { font-weight:300; }
+
+
+.h-caption { text-align: center; } 
+.h-caption i { display:block; font-size: 54px; color:#382526; margin-bottom:36px; }
+.h-caption h4 { color:#382526; font-size: 16px; font-weight: bold; margin-bottom:20px; }

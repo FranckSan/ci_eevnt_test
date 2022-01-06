@@ -6,6 +6,8 @@
 	<meta name="description" content="">
 	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
 	
+	<link rel="stylesheet" href="{{asset('css/app.css')}}">
+	
 	<title>Progressus - Free business bootstrap template by GetTemplate</title>
 
 	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
@@ -28,18 +30,16 @@
 
 <body class="home">
 	<!-- Fixed navbar -->
-	{{-- style="background-color: #fff"; --}}
-	{{-- navbar navbar-ligh navbar-inverse navbar-fixed-top headroom --}}
-	<div class="navbar fixed-top navbar-light bg-light " >
-		<div class="container-fluid ">
+	{{-- <div class="navbar navbar-dark bg-dark navbar-fixed-top headroom" >
+		<div class="container">
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.html"><img src="assets/images/logo_z.png" alt="Progressus HTML5 template"></a>
+				<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="" width="200" height="50"></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li class="active"><a href="#">Home</a></li>
+					<li class="active text-danger"><a href="#">Home</a></li>
 					<li><a href="about.html">About</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
@@ -53,30 +53,33 @@
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
-	</div> 
-
-	<nav class="navbar navbar-dark bg-dark navbar-expand-sm">
-		<a class="navbar-brand" href="#">
-		<img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/logo_white.png" width="30" height="30" alt="logo">
-		BootstrapBay
-		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-5" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbar-list-5">
-		<ul class="navbar-nav ml-auto">
-			<li class="nav-item active">
-			<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-			</li>
-			<li class="nav-item">
-			<a class="nav-link" href="#">About Us</a>
-			</li>
-			<li class="nav-item">
-			<a class="nav-link" href="#">Blog</a>
-			</li>
-		</ul>
-		</div>
-	</nav>
+	</div>  --}}
+	
+	<div class="container-fluid p-0">
+        <nav class="navbar navbar-dark bg-dark flex-row justify-content-between">
+            <div class="container p-0 m-0">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/logo.png" alt="" width="200" height="50">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
 
 	<!-- /.navbar -->
@@ -180,7 +183,7 @@
      		<p class="text-right"><a class="btn btn-primary btn-large">Learn more »</a></p>
   		</div>
 
-</div>	<!-- /container -->
+	</div>	<!-- /container -->
 	
 	<!-- Social links. @TODO: replace by link/instructions in template -->
 	<section id="social">
@@ -274,7 +277,7 @@
 
 
 
-
+	<script src="{{asset('js/app.js')}}"></script>
 	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>

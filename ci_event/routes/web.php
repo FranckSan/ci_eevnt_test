@@ -20,3 +20,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[Routes::class, 'index'])->name('acceuil');
 Route::get('/test',[Routes::class, 'test']);
+Route::get('/hum',[Routes::class, 'hum']);

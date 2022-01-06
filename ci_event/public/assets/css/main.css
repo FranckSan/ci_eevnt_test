@@ -16,6 +16,15 @@
 	#head .lead { font-size: 34px; }
 }
 
+/* MODIF */
+
+.navh{
+	background-color: black !important;
+}
+
+
+
+
 
 /* Autohide navbar */
 .slideUp { top:-100px; }
