@@ -12,11 +12,4 @@ class Routes extends Controller
        return view('index');
    }
    
-   
-   public function test()
-   {
-       return view('test');
-   }
-   
-   
 }

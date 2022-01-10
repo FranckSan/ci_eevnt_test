@@ -1,254 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
-	
-	<link rel="stylesheet" href="{{asset('css/app.css')}}">
-	
-	<title>Progressus - Free business bootstrap template by GetTemplate</title>
-
-	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
-	
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CI Event | Acceuil</title>
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
 	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-	<link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
-	<link rel="stylesheet" href="{{asset('assets/css/font-awesome.min.css')}}">
-	
+	{{-- <link rel="stylesheet" href="{{asset('assets/css/font-awesome.min.css')}}"> --}}
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" href="{{asset('assets/images/icon.png')}}">
 
-	<!-- Custom styles for our template -->
-	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
-	<link rel="stylesheet" href="assets/css/main.css">
-
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-	<script src="assets/js/html5shiv.js"></script>
-	<script src="assets/js/respond.min.js"></script>
-	<![endif]-->
 </head>
+{{-- class="bg-white" --}}
 
-<body class="home">
-	<!-- Fixed navbar -->
-	{{-- <div class="navbar navbar-dark bg-dark navbar-fixed-top headroom" >
-		<div class="container">
-			<div class="navbar-header">
-				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="" width="200" height="50"></a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-right">
-					<li class="active text-danger"><a href="#">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="sidebar-left.html">Left Sidebar</a></li>
-							<li class="active"><a href="sidebar-right.html">Right Sidebar</a></li>
-						</ul>
+{{-- border border-primary"> --}}
+<body >
+
+	{{-- ----------------------------------------------------- Nav Bar --------------------------------------------------------- --}}
+
+	<nav class="navbar sticky-top navbar-expand-lg navbar-white bg-white headroom border-bottom border-warning">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#" class="d-inline-block align-text-top">
+				<img src=" {{asset('assets/images/logo.png')}} " alt="Logo Côte d'Ivoire Evenement" width="200" height="50">
+			</a>
+			<button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href=" {{route('home')}} "><button type="button" class="btn border border-white btn-outline-warning">Acceuil</button></a>
 					</li>
-					<li><a href="contact.html">Contact</a></li>
-					<li><a class="btn" href="signin.html">SIGN IN / SIGN UP</a></li>
+					<li class="nav-item">
+						<a class="nav-link" href="#QuiSommesNous"><button type="button" class="btn border border-white btn-outline-warning">Qui Sommes-Nous</button></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#NosProduitsTag"><button type="button" class="btn border border-white btn-outline-warning">Nos Produits</button></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#NousContacter"><button type="button" class="btn border border-white btn-outline-warning">Nous Contacter</button></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#OuSommeNous"><button type="button" class="btn border border-white btn-outline-warning">Ou Somme Nous</button></a>
+					</li>
 				</ul>
-			</div><!--/.nav-collapse -->
-		</div>
-	</div>  --}}
-	
-	<div class="container-fluid p-0">
-        <nav class="navbar navbar-dark bg-dark flex-row justify-content-between">
-            <div class="container p-0 m-0">
-                <a class="navbar-brand" href="#">
-                    <img src="assets/images/logo.png" alt="" width="200" height="50">
-                </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-
-
-	<!-- /.navbar -->
-
-	<!-- Header -->
-	<header id="head">
-		<div class="container">
-			<div class="row">
-				<h1 class="lead">AWESOME, CUSTOMIZABLE, FREE</h1>
-				<p class="tagline">PROGRESSUS: free business bootstrap template by <a href="http://www.gettemplate.com/?utm_source=progressus&amp;utm_medium=template&amp;utm_campaign=progressus">GetTemplate</a></p>
-				<p><a class="btn btn-default btn-lg" role="button">MORE INFO</a> <a class="btn btn-action btn-lg" role="button">DOWNLOAD NOW</a></p>
 			</div>
 		</div>
-	</header>
-	<!-- /Header -->
+	</nav>
 
-	<!-- Intro -->
-	<div class="container text-center">
-		<br> <br>
-		<h2 class="thin">The best place to tell people why they are here</h2>
-		<p class="text-muted">
-			The difference between involvement and commitment is like an eggs-and-ham breakfast:<br> 
-			the chicken was involved; the pig was committed.
-		</p>
-	</div>
-	<!-- /Intro-->
-		
-	<!-- Highlights - jumbotron -->
-	<div class="jumbotron top-space">
+	{{-- ----------------------------------------------------- End Nav Bar --------------------------------------------------------- --}}
+
+	
+	{{-- ________________________________________ Carousel ___________________________________________ --}}
+
+    <div class="container-fluid h-10 p-0 " style="";>
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="assets/images/carousel/img_1.jpg" class="d-block  carousel_height" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="assets/images/carousel/img_2.jpg" class="d-block  carousel_height" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="assets/images/carousel/img_4.jpg" class="d-block  carousel_height" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="assets/images/carousel/img_7.jpg" class="d-block  carousel_height" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="assets/images/carousel/img_8.jpg" class="d-block  carousel_height" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Precédant</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Suivant</span>
+            </button>
+        </div>
+    </div>
+	
+	<div class="mb-3 pb-5" style="visibility: hiden" id="QuiSommesNous"></div>
+
+	{{-- ______________________________________ Qui Somme Nous ___________________________________________ --}}
+	<div class="container-fluid mb-5" >
+		<div class="container-fluid text-center bg-white mt-1 mb-0 pb-4" >
+			<br> <br>
+			<h2 class="thin mb-4 ">Qui sommes nous ?</h2>
+			<p class="text-muted">
+				Côte d’Ivoire Évènement (CI-Event) est une agence événementielle spécialisée dans la gestion événementielle<br> 
+				de bout en bout et la communication
+			</p>
+		</div>
+
+		<div class="container-fluid bg-white mt-3">
+			<div class="card mb-3 shadow rounded border-0" >
+				<div class="row g-0">
+					<div class="col-md-4 rounded">
+						<img src="{{asset('assets/images/foster.jpg')}}" class="img-fluid rounded-start" alt="...">
+					</div>
+					<div class="col-md-8 d-flex justify-content-center pt-3">
+						<div class="card-body">
+							<h5 class="card-title text-center">Foster N'CHO <br><small class="text-muted">Directeur Général</small></h5>
+							<p class="card-text text-center mt-4">
+								Fondateur de plusieurs entreprises dans la communication et l’événementiel, la rigueur 
+								et la détermination restent les mots qui le définissent.
+							</p>
+							<p class="card-text"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+
+	{{-- _______________________________________ Nos Produits ____________________________________________ --}}
+
+	<div class="mb-3 pb-5" style="visibility: hiden" id="NosProduitsTag"></div>
+
+    <div class="jumbotron top-space text-white" id="NosProduits">
 		<div class="container">
 			
-			<h3 class="text-center thin">Reasons to use this template</h3>
+			<h2 class="text-center thin mb-4">Nos Produids</h2>
 			
-			<div class="row">
-				<div class="col-md-3 col-sm-6 highlight">
-					<div class="h-caption"><h4><i class="fa fa-cogs fa-5"></i>Bootstrap-powered</h4></div>
+			<div class="row d-flex justify-content-evenly">
+				<div class="col-md-3 col-sm-6">
+					<div class="h-caption">
+						<img src=" {{asset('assets/images/succes.png')}} " class="img-fluid" alt="Conférence Succes de Cote d'Ivoire Evenement">
+						<h3 class="text-white mt-"> Conférences SUCCÈS</h3>
+					</div>
 					<div class="h-body text-center">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aliquid adipisci aspernatur. Soluta quisquam dignissimos earum quasi voluptate. Amet, dignissimos, tenetur vitae dolor quam iusto assumenda hic reprehenderit?</p>
+						<p>une tribune qui a pour objectif de mettre en avant les talents et les réussites locaux ivoiriens et africains</p>
 					</div>
 				</div>
-				<div class="col-md-3 col-sm-6 highlight">
-					<div class="h-caption"><h4><i class="fa fa-flash fa-5"></i>Fat-free</h4></div>
+				<div class="col-md-3 col-sm-6">
+					<div class="h-caption">
+						<img src=" {{asset('assets/images/bet.png')}} " class="img-fluid" width="881" height="283" alt=" l'evenement Between Us de Côte d'Ivoire Evenement">
+						<h3 class="text-white"> Conférences SUCCÈS</h3>
+					</div>
 					<div class="h-body text-center">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, commodi, sequi quis ad fugit omnis cumque a libero error nesciunt molestiae repellat quos perferendis numquam quibusdam rerum repellendus laboriosam reprehenderit! </p>
+						<p>l’Afterwork de réseautage professionnel</p>
 					</div>
 				</div>
-				<div class="col-md-3 col-sm-6 highlight">
-					<div class="h-caption"><h4><i class="fa fa-heart fa-5"></i>Creative Commons</h4></div>
+				
+				<div class="col-md-3 col-sm-6">
+					<div class="h-caption">
+						<h4 class="text-white">Creative Commons</h4>
+					</div>
 					<div class="h-body text-center">
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, vitae, perferendis, perspiciatis nobis voluptate quod illum soluta minima ipsam ratione quia numquam eveniet eum reprehenderit dolorem dicta nesciunt corporis?</p>
 					</div>
 				</div>
-				<div class="col-md-3 col-sm-6 highlight">
-					<div class="h-caption"><h4><i class="fa fa-smile-o fa-5"></i>Author's support</h4></div>
-					<div class="h-body text-center">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, excepturi, maiores, dolorem quasi reprehenderit illo accusamus nulla minima repudiandae quas ducimus reiciendis odio sequi atque temporibus facere corporis eos expedita? </p>
-					</div>
-				</div>
-			</div> <!-- /row  -->
+			</div>
 		
 		</div>
 	</div>
-	<!-- /Highlights -->
 
-	<!-- container -->
-	<div class="container">
+	{{-- ______________________________________ Nous Contacter _____________________________________________ --}}
 
-		<h2 class="text-center top-space">Frequently Asked Questions</h2>
+	<div class="container-fluid my-5" id="NousContacter">
+
+		<h2 class="text-center thin mt-6">Nous contacter</h2>
 		<br>
 
-		<div class="row">
-			<div class="col-sm-6">
-				<h3>Which code editor would you recommend?</h3>
-				<p>I'd highly recommend you <a href="http://www.sublimetext.com/">Sublime Text</a> - a free to try text editor which I'm using daily. Awesome tool!</p>
-			</div>
-			<div class="col-sm-6">
-				<h3>Nice header. Where do I find more images like that one?</h3>
-				<p>
-					Well, there are thousands of stock art galleries, but personally, 
-					I prefer to use photos from these sites: <a href="http://unsplash.com">Unsplash.com</a> 
-					and <a href="http://www.flickr.com/creativecommons/by-2.0/tags/">Flickr - Creative Commons</a></p>
-			</div>
-		</div> <!-- /row -->
-
-		<div class="row">
-			<div class="col-sm-6">
-				<h3>Can I use it to build a site for my client?</h3>
-				<p>
-					Yes, you can. You may use this template for any purpose, just don't forget about the <a href="http://creativecommons.org/licenses/by/3.0/">license</a>, 
-					which says: "You must give appropriate credit", i.e. you must provide the name of the creator and a link to the original template in your work. 
-				</p>
-			</div>
-			<div class="col-sm-6">
-				<h3>Can you customize this template for me?</h3>
-				<p>Yes, I can. Please drop me a line to sergey-at-pozhilov.com and describe your needs in details. Please note, my services are not cheap.</p>
-			</div>
-		</div> <!-- /row -->
-
-		<div class="jumbotron top-space">
-			<h4>Dicta, nostrum nemo soluta sapiente sit dolor quae voluptas quidem doloribus recusandae facere magni ullam suscipit sunt atque rerum eaque iusto facilis esse nam veniam incidunt officia perspiciatis at voluptatibus. Libero, aliquid illum possimus numquam fuga.</h4>
-     		<p class="text-right"><a class="btn btn-primary btn-large">Learn more »</a></p>
+		{{-- <div class="row d-flex flex-column align-items-center border border-primary">
+			<h4 class="text-center border border-primary">Pour prendre rendez-vous, avoir plus d'innformation ou nous contacter </h4>
+     		<a class="btn btn-outline-warning" href="#">Contacter</a>
+  		</div> --}}
+		<div class="container-fluid d-flex flex-column align-items-center">
+			<h5 class="mb-4 text-center">Pour prendre rendez-vous, avoir plus d'innformation ou nous contacter.</h5>
+     		<p class=""><a href=" {{route('contact')}} " class="btn btn-outline-warning">Contacter »</a></p>
   		</div>
 
-	</div>	<!-- /container -->
-	
-	<!-- Social links. @TODO: replace by link/instructions in template -->
-	<section id="social">
-		<div class="container">
-			<div class="wrapper clearfix">
-				<!-- AddThis Button BEGIN -->
-				<div class="addthis_toolbox addthis_default_style">
-				<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-				<a class="addthis_button_tweet"></a>
-				<a class="addthis_button_linkedin_counter"></a>
-				<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
-				</div>
-				<!-- AddThis Button END -->
-			</div>
-		</div>
-	</section>
-	<!-- /social links -->
+	</div>
 
+    <footer id="footer" class="mt-6 py-3 text-warning bg-dark">
 
-	<footer id="footer" class="top-space">
-
-		<div class="footer1">
-			<div class="container">
-				<div class="row">
-					
-					<div class="col-md-3 widget">
+		<div class="footer1 ">
+			<div class="container mt-2">
+				<div class="row d-flex justify-content-between">
+					<div class="col-md-4 d-flex flex-column align-items-center">
 						<h3 class="widget-title">Contact</h3>
-						<div class="widget-body">
-							<p>+234 23 9873237<br>
-								<a href="mailto:#">some.email@somewhere.com</a><br>
+						<div class="mt-1">
+							<p class="">
+								<i class="fa fa-phone fs-5 pe-2 text-warning"></i>+225 2722497873<br>
+								<a  class="text-decoration-none link-warning" href=" {{route('contact')}} ">
+								{{-- mailto:# --}}
+									<i class="fa fa-envelope fs-5 pe-2 text-warning"></i>infos@cievent.ci
+									</a>
 								<br>
-								234 Hidden Pond Road, Ashland City, TN 37015
+								<a href="" class="text-decoration-none link-warning"><i class="fa fa-map fs-5 pe-2 text-warning"></i>Angre Abidjan, Côte d'Ivoire</a>
 							</p>	
 						</div>
 					</div>
 
-					<div class="col-md-3 widget">
-						<h3 class="widget-title">Follow me</h3>
-						<div class="widget-body">
-							<p class="follow-me-icons">
-								<a href=""><i class="fa fa-twitter fa-2"></i></a>
-								<a href=""><i class="fa fa-dribbble fa-2"></i></a>
-								<a href=""><i class="fa fa-github fa-2"></i></a>
-								<a href=""><i class="fa fa-facebook fa-2"></i></a>
-							</p>	
+					<div class="col-md-4 d-flex flex-column align-items-center">
+						<h3 class="widget-title mb-0">Suivez nous</h3>
+						<div class="fa-3x">
+							{{-- <p class="follow-me-icons"> --}}
+								<a href="#"><i class="fa fa-twitter fs-1 text-warning"></i></a>
+								<a href="#"><i class="fa fa-instagram fs-1 text-warning" ></i></a>
+								<a href="#"><i class="fa fa-youtube fs-1 text-warning"></i></a>
+								<a href="#"><i class="fa fa-facebook fs-1 text-warning"></i></a>
+							{{-- </p>	 --}}
 						</div>
 					</div>
-
-					<div class="col-md-6 widget">
-						<h3 class="widget-title">Text widget</h3>
-						<div class="widget-body">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde?</p>
-							<p>Eius consequatur nihil quibusdam! Laborum, rerum, quis, inventore ipsa autem repellat provident assumenda labore soluta minima alias temporibus facere distinctio quas adipisci nam sunt explicabo officia tenetur at ea quos doloribus dolorum voluptate reprehenderit architecto sint libero illo et hic.</p>
-						</div>
-					</div>
-
-				</div> <!-- /row of widgets -->
+				</div>
 			</div>
 		</div>
 
 		<div class="footer2">
-			<div class="container">
-				<div class="row">
+			<div class="container-fluid">
+				<div class="row d-flex justify-content-center">
 					
-					<div class="col-md-6 widget">
+					{{-- <div class="col-md-6 widget">
 						<div class="widget-body">
 							<p class="simplenav">
 								<a href="#">Home</a> | 
@@ -258,31 +234,20 @@
 								<b><a href="signup.html">Sign up</a></b>
 							</p>
 						</div>
-					</div>
+					</div> --}}
 
-					<div class="col-md-6 widget">
-						<div class="widget-body">
-							<p class="text-right">
-								Copyright &copy; 2014, Your name. Designed by <a href="http://gettemplate.com/" rel="designer">gettemplate</a> 
-							</p>
-						</div>
+					<div class="col-md-6 p-0">
+						<p class="text-center">
+							Copyright &copy; 2022, Côte d'Ivoire Evènement
+						</p>
 					</div>
 
 				</div> <!-- /row of widgets -->
 			</div>
 		</div>
 
-	</footer>	
-		
+	</footer>
 
-
-
-	<script src="{{asset('js/app.js')}}"></script>
-	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-	<script src="assets/js/headroom.min.js"></script>
-	<script src="assets/js/jQuery.headroom.min.js"></script>
-	<script src="assets/js/template.js"></script>
+    <script src="{{asset('js/app.js')}}"></script>
 </body>
 </html>

@@ -4,45 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CI Event | Contact</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
 	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-	{{-- <link rel="stylesheet" href="{{asset('assets/css/font-awesome.min.css')}}"> --}}
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" href="{{asset('assets/images/icon.png')}}">
 
 </head>
 
 <body >
-{{-- fixed-top --}}
-    <div class="container-fluid p-0 ">
-        <nav class="d-flex justify-content-between navbar navbar-dark bg-dark ">
-            <div class="col-3 p-0 m-0">
-                <a class="navbar-brand" href="#">
-                    <img src="assets/images/logo.png" alt="" width="200" height="50">
-                </a>
-            </div>
-            <div class="col-8 ps-5 d-flex justify-content-center">
-                <!-- Links -->
-                <ul class="col-10 navbar-nav d-flex flex-row justify-content-around ">
-                    <li class="nav-item nav-fill">
-                        <a class="nav-link" href="#"><button type="button" class="btn border border-dark btn-outline-warning">Acceuil</button></a>
-                    </li>
-                    <li class="nav-item nav-fill">
-                        <a class="nav-link" href="#qui_sommes_nous"><button type="button" class="btn border border-dark btn-outline-warning">Qui Sommes-Nous</button></a>
-                    </li>
-                    <li class="nav-item nav-fill">
-                        <a class="nav-link" href="#sec_1"><button type="button" class="btn border border-dark btn-outline-warning">Nos Produits</button></a>
-                    </li>
-                    <li class="nav-item nav-fill">
-                        <a class="nav-link" href=""><button type="button" class="btn border border-dark btn-outline-warning">Nous Contacter</button></a>
-                    </li>
-                    <li class="nav-item nav-fill">
-                        <a class="nav-link" href="#"><button type="button" class="btn border border-dark btn-outline-warning">Ou Somme Nous</button></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+
+	
+	{{-- ----------------------------------------------------- Nav Bar --------------------------------------------------------- --}}
+{{-- --}}
+	<nav class="navbar sticky-top navbar-expand-lg navbar-white bg-white headroom border-bottom border-warning">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#" class="d-inline-block align-text-top">
+				<img src=" {{asset('assets/images/logo.png')}} " alt="Logo Côte d'Ivoire Evenement" width="200" height="50">
+			</a>
+			<button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href=" {{route('home')}} "><button type="button" class="btn border border-white btn-outline-warning">Acceuil</button></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{route('home')}}#QuiSommesNous"><button type="button" class="btn border border-white btn-outline-warning">Qui Sommes-Nous</button></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{route('home')}}#NosProduits"><button type="button" class="btn border border-white btn-outline-warning">Nos Produits</button></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{route('home')}}#NousContacter"><button type="button" class="btn border border-white btn-outline-warning">Nous Contacter</button></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{route('home')}}#OuSommeNous"><button type="button" class="btn border border-white btn-outline-warning">Ou Somme Nous</button></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	{{-- ----------------------------------------------------- End Nav Bar --------------------------------------------------------- --}}
+
 
     <div class="container">
 
@@ -83,14 +89,40 @@
                         </div>
                     </div>
                     <br>
-                    <div class="container-fluid d-flex justify-content-end P-0">
-                        <div class="col-sm-6 m-0 d-flex justify-content-end">
-						<button type="submit" class="btn btn-outline-warning">Envoyer</button>
-                            {{-- <a href="{{route('send.mail')}}"></a> --}}
-                        </div>
+					<div class="container-fluid d-flex justify-content-end p-0">
+						<div class=" m-0 me-4 d-flex justify-content-end">
+							<a class="btn btn-outline-danger" href="{{route('home')}}">Annuler</a>
+						</div>
+						<div class="m-0 d-flex justify-content-end">
+							{{-- <button type="submit" class="btn btn-outline-warning">Envoyer</button> --}}
+							<button type="submit" class="btn btn-outline-warning">Envoyer</button>
+						</div>
                     </div>
                     <br>
                 </form>
+
+					{{-- <div id="liveAlertPlaceholder"></div>
+					<button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+				<button type="button" class="btn btn-sm btn-outline-primary mt-1" data-bs-toggle="modal" data-bs-target="#exampleModal">Lire</button>
+                <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <p class="text-center">Votre message a bien été envoyé<br>Merci.</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                <!-- End Modal --> --}}
+
 
 			</article>
 			<!-- /Article -->

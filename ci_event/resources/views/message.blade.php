@@ -13,38 +13,29 @@
 </head>
 
 <body>
-    <div class="container-fluid p-0 m-0">
-        <div class="container-fluid p-0">
-            <nav class="d-flex justify-content-between navbar navbar-dark bg-dark ">
-                <div class="col-3 p-0 m-0">
-                    <a class="navbar-brand" href="#">
-                        <img src="assets/images/logo.png" alt="" width="200" height="50">
-                    </a>
-                </div>
-                <div class="col-8 ps-5 d-flex justify-content-center">
-                    <!-- Links -->
-                    <ul class="col-10 navbar-nav d-flex flex-row justify-content-around ">
-                        <li class="nav-item nav-fill">
-                            <a class="nav-link" href="#"><button type="button" class="btn border border-dark btn-outline-warning">Acceuil</button></a>
-                        </li>
-                        <li class="nav-item nav-fill">
-                            <a class="nav-link" href="#qui_sommes_nous"><button type="button" class="btn border border-dark btn-outline-warning">Qui Sommes-Nous</button></a>
-                        </li>
-                        <li class="nav-item nav-fill">
-                            <a class="nav-link" href="#sec_1"><button type="button" class="btn border border-dark btn-outline-warning">Nos Produits</button></a>
-                        </li>
-                        <li class="nav-item nav-fill">
-                            <a class="nav-link" href=""><button type="button" class="btn border border-dark btn-outline-warning">Nous Contacter</button></a>
-                        </li>
-                        <li class="nav-item nav-fill">
-                            <a class="nav-link" href="#"><button type="button" class="btn border border-dark btn-outline-warning">Ou Somme Nous</button></a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+    
+	{{-- ----------------------------------------------------- Nav Bar --------------------------------------------------------- --}}
 
-        <!-- -------------------------------------------------------------------------------->
+	<nav class="navbar sticky-top navbar-expand-lg navbar-white bg-white headroom border-bottom border-warning">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#" class="d-inline-block align-text-top">
+				<img src=" {{asset('assets/images/logo.png')}} " alt="Logo Côte d'Ivoire Evenement" width="200" height="50">
+			</a>
+			<button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href=" {{route('home')}} "><button type="button" class="btn border border-white btn-outline-warning">Acceuil</button></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	{{-- ----------------------------------------------------- End Nav Bar --------------------------------------------------------- --}}
+
         
         <div class="container-fluid">
 

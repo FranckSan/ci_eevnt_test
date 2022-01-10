@@ -15,7 +15,7 @@ class GestionController extends Controller
 
     public function contact()
    {
-       return view('cont');
+       return view('contact');
    }
 
     public function store(Request $request)

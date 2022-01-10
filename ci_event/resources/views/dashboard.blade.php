@@ -7,38 +7,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{asset('css/app.css')}}">
 	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-	{{-- <link rel="stylesheet" href="{{asset('assets/css/font-awesome.min.css')}}"> --}}
+  <link rel="icon" href="{{asset('assets/images/icon.png')}}">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-  <title>Document</title>
+  <title>CI Event | Dashboard</title>
 </head>
 <body >
   <div class="container-fluid p-0 m-0">
-    <div class="container-fluid p-0 ">
-      <nav class="d-flex justify-content-between navbar navbar-dark bg-light ">
-        <div class="col-3 p-0 m-0">
-          <a class="navbar-brand" href="#">
-            <img src="assets/images/logo.png" alt="" width="200" height="50">
-          </a>
-        </div>
-        <div class="col-8 pe-5 d-flex justify-content-end ">
-          <!-- Links -->
-          <ul class="navbar-nav">
-            <li class="nav-item nav-fill">
-              <a class="nav-link" href="#"><button type="button"
-                class="btn border border-dark btn-outline-warning">Acceuil</button>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+
+	{{-- ----------------------------------------------------- Nav Bar --------------------------------------------------------- --}}
+
+	<nav class="navbar sticky-top navbar-expand-lg navbar-white bg-white headroom border-bottom border-warning">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#" class="d-inline-block align-text-top">
+				<img src=" {{asset('assets/images/logo.png')}} " alt="Logo Côte d'Ivoire Evenement" width="200" height="50">
+			</a>
+			<button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href=" {{route('home')}} "><button type="button" class="btn border border-white btn-outline-warning">Acceuil</button></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	{{-- ----------------------------------------------------- End Nav Bar --------------------------------------------------------- --}}
+
 
     <!-- ---------------------------- table -------------------------------------->
 
-    <div class="container-fluid my-4 mx-0 px-0 d-flex justify-content-center border border-warning">
+    <div class="container-fluid my-4 mx-0 px-0 d-flex justify-content-center">
       {{-- border border-warning --}}
       <div class="container-fluid">
         @if ( $datas->count() > 0)

@@ -21,8 +21,8 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/',[Routes::class, 'index']);
-Route::get('/test',[Routes::class, 'test'])->name('home');
+Route::get('/',[Routes::class, 'index'])->name('home');
+// Route::get('/test',[Routes::class, 'test']);
 // Route::get('/mail',[TestMailController::class, 'test_mail'])->name('send.mail');
 Route::get('/contact',[GestionController::class, 'contact'])->name('contact');
 Route::post('/contact',[GestionController::class, 'store'])->name('store.message');
