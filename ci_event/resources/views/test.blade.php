@@ -15,7 +15,47 @@
 
 {{-- border border-primary"> --}}
 <body >
-    <div class="container-fluid p-0 fixed-top">
+
+	{{-- ----------------------------------------------------- Nav Bar --------------------------------------------------------- --}}
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#" class="d-inline-block align-text-top">
+				<img src=" {{asset('assets/images/logo.png')}} " alt="Logo Côte d'Ivoire Evenement" width="200" height="50">
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end border border-primary" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href=" {{route('home')}} "><button type="button" class="btn btn-sm border border-white btn-outline-warning">Acceuil</button></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#QuiSommesNous"><button type="button" class="btn btn-sm border border-white btn-outline-warning">Qui Sommes-Nous</button></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#NosProduits"><button type="button" class="btn btn-sm border border-warning btn-outline-warning">Nos Produits</button></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#NousContacter"><button type="button" class="btn btn-sm border border-warning btn-outline-warning">Nous Contacter</button></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#OuSommeNous"><button type="button" class="btn btn-sm border border-warning btn-outline-warning">Ou Somme Nous</button></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+
+
+
+	{{-- ----------------------------------------------------- End Nav Bar --------------------------------------------------------- --}}
+
+
+    {{-- <div class="container-fluid p-0 fixed-top">
         <nav class="d-flex justify-content-between navbar navbar-dark bg-dark ">
             <div class="col-3 p-0 m-0">
                 <a class="navbar-brand" href="#">
@@ -24,7 +64,7 @@
             </div>
             <div class="col-8 ps-5 d-flex justify-content-center">
                 <!-- Links -->
-                <ul class="col-10 navbar-nav d-flex flex-row  justify-content-around ">
+                <ul class="col-10 navbar-nav d-flex flex-row justify-content-around ">
                     <li class="nav-item nav-fill">
                         <a class="nav-link" href="#"><button type="button" class="btn border border-dark btn-outline-warning">Acceuil</button></a>
                     </li>
@@ -43,26 +83,34 @@
                 </ul>
             </div>
         </nav>
-    </div>
+    </div> --}}
 
     {{-- carousel --}}
 
-    <div class="container-fluid h-10 p-0">
-        <div id="carouselExampleIndicators" class="carousel slide vh-1" data-bs-ride="carousel">
+    <div class="container-fluid h-10 p-0 " style="";>
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="assets/images/1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="assets/images/carousel/img_1.jpg" class="d-block  carousel_height" alt="...">
                 </div>
-                <div class="carousel-item">
-                    <img src="assets/images/2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="assets/images/carousel/img_2.jpg" class="d-block  carousel_height" alt="...">
                 </div>
-                <div class="carousel-item">
-                    <img src="assets/images/bg_header.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="assets/images/carousel/img_4.jpg" class="d-block  carousel_height" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="assets/images/carousel/img_7.jpg" class="d-block  carousel_height" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="assets/images/carousel/img_8.jpg" class="d-block  carousel_height" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -78,11 +126,11 @@
 	
     {{-- end carousel --}}
 
-{{-- ___________________________________________________________________________________ --}}
+	{{-- ___________________________________________________________________________________ --}}
 
 	{{-- presentation --}}
 
-    <div class="container-fluid text-center bg-white mt-5 mb-5 pb-5 border border-primary" id="qui_sommes_nous">
+    <div class="container-fluid text-center bg-white mt-5 mb-5 pb-5" id="QuiSommesNous">
 		<br> <br>
 		<h2 class="thin mb-4 ">Qui sommes nous ?</h2>
 		<p class="text-muted">
@@ -93,12 +141,12 @@
 
 	{{-- end presentation --}}
 
-{{-- ___________________________________________________________________________________ --}}
+	{{-- ___________________________________________________________________________________ --}}
 
 
 	{{-- Nos Produits --}}
 
-    <div class="jumbotron top-space text-white" id="sec_1">
+    <div class="jumbotron top-space text-white" id="NosProduits">
 		<div class="container">
 			
 			<h2 class="text-center thin mb-4">Nos Produids</h2>
@@ -138,9 +186,9 @@
 
 	{{-- end nos services --}}
 
-{{-- ___________________________________________________________________________________ --}}
+	{{-- ___________________________________________________________________________________ --}}
 
-	<div class="container-fluid my-5">
+	<div class="container-fluid my-5" id="#NousContacter">
 
 		<h2 class="text-center thin mt-6">Nous contacter</h2>
 		<br>
@@ -151,12 +199,12 @@
   		</div> --}}
 		<div class="container-fluid d-flex flex-column align-items-center">
 			<h5 class="mb-4">Pour prendre rendez-vous, avoir plus d'innformation ou nous contacter.</h5>
-     		<p class=""><a class="btn btn-outline-warning">Contacter »</a></p>
+     		<p class=""><a href=" {{route('contact')}} " class="btn btn-outline-warning">Contacter »</a></p>
   		</div>
 
 	</div>
 
-    <footer id="footer" class="mt-6 py-3 border border-warning text-warning bg-dark">
+    <footer id="footer" class="mt-6 py-3 text-warning bg-dark">
 
 		<div class="footer1 ">
 			<div class="container mt-2">
