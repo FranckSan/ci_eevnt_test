@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,11 +12,21 @@
 
 </head>
 
-<body >
-
+<body>
+	@if(Session::has('success'))
+		{{-- <div class="alert alert-success">
+			{{Session::get('success')}}
+		</div> --}}
+		<div id="msg" class="container-fluid alert alert-success d-flex align-items-center" role="alert">
+			<svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+			<div class="wm">
+				<p class="text-center">Votre message a bien été envoyé, Merci.</p>
+			</div>
+		</div>
+	@endif
 	
 	{{-- ----------------------------------------------------- Nav Bar --------------------------------------------------------- --}}
-{{-- --}}
+
 	<nav class="navbar sticky-top navbar-expand-lg navbar-white bg-white headroom border-bottom border-warning">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#" class="d-inline-block align-text-top">
@@ -69,15 +79,15 @@
                     @csrf
                     <div class="row">
                         <div class="col-sm-4">
-                            <input name="name" class="form-control bg-transparent" type="text" placeholder="Nom et Prenoms" required>
+                            <input name="name" class="form-control bg-transparent" type="text" placeholder="Nom et Prenoms" required autofocus>
                             <span class="text-danger">{{ $errors->first('name') }}</span>
                         </div>
                         <div class="col-sm-4">
-                            <input name="email" class="form-control bg-transparent media" type="text" placeholder="Email" required>
+                            <input name="email" class="form-control bg-transparent media" type="text" placeholder="Email" maxlength="40" required>
                             <span class="text-danger">{{ $errors->first('email') }}</span>
                         </div>
                         <div class="col-sm-4">
-                            <input name="phone" class="form-control bg-transparent" type="text" placeholder="Numero" required>
+                            <input name="phone" class="form-control bg-transparent" type="tel" placeholder="Numero" maxlength="10" pattern="[0-9]{10}" required>
                             <span class="text-danger">{{ $errors->first('phone') }}</span>
                         </div>
                     </div>

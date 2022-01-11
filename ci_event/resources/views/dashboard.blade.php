@@ -19,15 +19,15 @@
 
 	{{-- ----------------------------------------------------- Nav Bar --------------------------------------------------------- --}}
 
-	<nav class="navbar sticky-top navbar-expand-lg navbar-white bg-white headroom border-bottom border-warning">
+	<nav class="navbar sticky-top navbar-expand-lg navbar-white bg-white headroom border-bottom border-warning mb-5">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#" class="d-inline-block align-text-top">
 				<img src=" {{asset('assets/images/logo.png')}} " alt="Logo Côte d'Ivoire Evenement" width="200" height="50">
 			</a>
-			<button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			{{-- <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+			</button> --}}
+			<div class=" justify-content-end" id="navbarSupportedContent">
 				<ul class="navbar-nav">
 					<li class="nav-item">
 						<a class="nav-link active" aria-current="page" href=" {{route('home')}} "><button type="button" class="btn border border-white btn-outline-warning">Acceuil</button></a>

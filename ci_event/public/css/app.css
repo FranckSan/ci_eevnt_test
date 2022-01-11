@@ -11291,6 +11291,10 @@ body {
   font-family: "Open sans", Helvetica, Arial;
 }
 
+.headroom {
+  transition: all 0.4s ease-out;
+}
+
 #NosProduits {
   background-color: rgba(255, 166, 0, 0.726);
 }
@@ -11309,13 +11313,24 @@ body {
 
 .carousel_height {
   width: 100% !important;
-  height: 75vh;
+  max-height: 70vh;
 }
+
+/* #msg{
+  transition-property: display;
+  transition-timing-function: linear;
+  
+} */
 
 @media screen and (max-width: 480px) {
   .media {
     margin-top: 0.5rem !important;
     margin-bottom: 0.5rem !important;
+  }
+
+  .carousel_height {
+    width: 100% !important;
+    max-height: 50vh;
   }
 }
 /*******************************/

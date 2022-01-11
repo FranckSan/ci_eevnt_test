@@ -10,13 +10,13 @@
 	{{-- <link rel="stylesheet" href="{{asset('assets/css/font-awesome.min.css')}}"> --}}
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="icon" href="{{asset('assets/images/icon.png')}}">
-
+	<script type="text/javascript" src="http://maps.google.com/maps?file=api&v=2&key=[clé]"></script>
 </head>
 {{-- class="bg-white" --}}
 
 {{-- border border-primary"> --}}
 <body >
-
+	
 	{{-- ----------------------------------------------------- Nav Bar --------------------------------------------------------- --}}
 
 	<nav class="navbar sticky-top navbar-expand-lg navbar-white bg-white headroom border-bottom border-warning">
@@ -27,7 +27,7 @@
 			<button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+			<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 				<ul class="navbar-nav">
 					<li class="nav-item">
 						<a class="nav-link active" aria-current="page" href=" {{route('home')}} "><button type="button" class="btn border border-white btn-outline-warning">Acceuil</button></a>
@@ -65,16 +65,16 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="3000">
-                    <img src="assets/images/carousel/img_1.jpg" class="d-block  carousel_height" alt="...">
+                    <img src="assets/images/carousel/img_1.jpg" class="d-block  carousel_height img-fluid" alt="...">
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
-                    <img src="assets/images/carousel/img_2.jpg" class="d-block  carousel_height" alt="...">
+                    <img src="assets/images/carousel/img_2.jpg" class="d-block  carousel_height img-fluid" alt="...">
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
-                    <img src="assets/images/carousel/img_4.jpg" class="d-block  carousel_height" alt="...">
+                    <img src="assets/images/carousel/img_4.jpg" class="d-block  carousel_height img-fluid" alt="...">
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
-                    <img src="assets/images/carousel/img_7.jpg" class="d-block  carousel_height" alt="...">
+                    <img src="assets/images/carousel/img_7.jpg" class="d-block  carousel_height img-fluid" alt="...">
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
                     <img src="assets/images/carousel/img_8.jpg" class="d-block  carousel_height" alt="...">
@@ -110,10 +110,10 @@
 					<div class="col-md-4 rounded">
 						<img src="{{asset('assets/images/foster.jpg')}}" class="img-fluid rounded-start" alt="...">
 					</div>
-					<div class="col-md-8 d-flex justify-content-center pt-3">
-						<div class="card-body">
+					<div class="col-md-8  pt-3">
+						<div class="card-body d-flex flex-column align-items-center ">
 							<h5 class="card-title text-center">Foster N'CHO <br><small class="text-muted">Directeur Général</small></h5>
-							<p class="card-text text-center mt-4">
+							<p class="card-text text-center mt-4 text-muted w-75">
 								Fondateur de plusieurs entreprises dans la communication et l’événementiel, la rigueur 
 								et la détermination restent les mots qui le définissent.
 							</p>
@@ -185,6 +185,12 @@
 
 	</div>
 
+	{{-- ______________________________________ Ou Somme Nous _____________________________________________ --}}
+
+	<div id="map-canvas"></div>
+
+	{{-- ______________________________________ Footer _____________________________________________ --}}
+
     <footer id="footer" class="mt-6 py-3 text-warning bg-dark">
 
 		<div class="footer1 ">
@@ -248,6 +254,11 @@
 
 	</footer>
 
+	<script type="text/javascript">
+		if (GBrowserIsCompatible()) {
+			map = new Gmap2(document.getElementById('map-canvas'), {size : new GSize(500, 440)}) ;
+		}
+	</script>
     <script src="{{asset('js/app.js')}}"></script>
 </body>
 </html>

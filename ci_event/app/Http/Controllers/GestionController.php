@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\ContactMarkdownMail;
-use App\Mail\ReceptionMarkdownMail;
 use App\Mail\TestMail;
-use App\Mail\TestMarkdownMail;
 use App\Models\Gestion;
 use Illuminate\Http\Request;
+use App\Mail\TestMarkdownMail;
+use App\Mail\ContactMarkdownMail;
+use App\Mail\ReceptionMarkdownMail;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Redirect;
 
 class GestionController extends Controller
 {
@@ -41,7 +42,8 @@ class GestionController extends Controller
         
         // return back()->with('success', 'User added successfully.');
         // return back();
-        return view('/test');
+        // return view('/contact')->with('alert', 'Deleted!');
+        return Redirect::to("/contact")->withSuccess('Success message');
     }
 
     

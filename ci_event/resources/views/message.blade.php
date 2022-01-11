@@ -60,12 +60,12 @@
                                 <span class="text-danger">{{ $errors->first('name') }}</span>
                             </div> --}}
                             <div class="col-sm-4">
-                                <input name="email" class="form-control bg-transparent media" type="text" placeholder="Email du destinataire" value="{{$datas->email}}" required>
+                                <input name="email" class="form-control bg-transparent media" type="text" placeholder="Email du destinataire" value="{{$datas->email}}" readonly>
                                 <span class="text-danger">{{ $errors->first('email') }}</span>
                             </div>
                             <div class="col-sm-4">
-                                <input name="name" class="form-control bg-transparent" type="text" placeholder="Nom du destinataire" value="{{$datas->name}}" required>
-                                <span class="text-danger">{{ $errors->first('phone') }}</span>
+                                <input name="name" class="form-control bg-transparent" type="text" placeholder="Nom du destinataire" value="{{$datas->name}}" >
+                                <span class="text-danger">{{ $errors->first('name') }}</span>
                             </div>
                         </div>
                         <br>
